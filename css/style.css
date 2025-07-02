@@ -1,4 +1,6 @@
-/* --- GERAL --- */
+/* ========================
+   GERAL
+======================== */
 body {
   margin: 0;
   font-family: sans-serif;
@@ -6,21 +8,21 @@ body {
   color: #2f5631;
 }
 
+/* ========================
+   NAVEGAÇÃO
+======================== */
 header {
   background-color: #fff7d4;
   padding: 1rem;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-/* Navbar - sempre em linha com scroll horizontal se necessário */
+/* Navbar ajustada para logo em cima e menu em linha abaixo, ambos centralizados */
 .navbar {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  padding: 0 1rem;
-  flex-wrap: nowrap; /* não quebra linha */
-  overflow-x: auto; /* scroll horizontal se necessário */
-  -webkit-overflow-scrolling: touch; /* suaviza scroll no iOS */
+  gap: 0.5rem; /* espaço entre logo e menu */
 }
 
 .logo {
@@ -28,8 +30,8 @@ header {
   align-items: center;
   gap: 0.5rem;
   font-weight: bold;
-  font-size: 1.2rem;
-  flex-shrink: 0; /* não encolhe */
+  font-size: 1.5rem;
+  color: #2f5631;
 }
 
 .logo img {
@@ -39,35 +41,29 @@ header {
 .menu {
   list-style: none;
   display: flex;
-  gap: 1rem;
-  margin: 0;
+  gap: 2rem;
   padding: 0;
-  flex-wrap: nowrap;
-  overflow-x: auto; /* scroll horizontal se necessário */
-  -webkit-overflow-scrolling: touch;
-}
-
-.menu li {
-  flex-shrink: 0; /* não encolhe */
+  margin: 0;
 }
 
 .menu a {
   text-decoration: none;
   color: #2f5631;
   font-weight: 500;
-  padding: 0.5rem 0.8rem;
-  white-space: nowrap; /* sem quebra de texto */
-  display: block;
   font-size: 1rem;
-  transition: background-color 0.3s ease;
+  padding: 0.3rem 0;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease;
 }
 
-.menu a:hover {
-  background-color: #e1dcb2;
-  border-radius: 5px;
+.menu a:hover,
+.menu a:focus {
+  border-bottom: 2px solid #2f5631;
 }
 
-/* --- INÍCIO --- */
+/* ========================
+   HOME
+======================== */
 .home {
   padding: 1rem;
 }
@@ -85,6 +81,12 @@ header {
   text-decoration: none;
   border-radius: 6px;
   margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.botao-explorar:hover,
+.botao-explorar:focus {
+  background-color: #3f7444;
 }
 
 .icones-servicos {
@@ -92,41 +94,197 @@ header {
   justify-content: space-around;
   margin: 2rem 0;
   text-align: center;
-  flex-wrap: wrap;
-  gap: 1.2rem;
-}
-
-.icones-servicos .icone {
-  flex: 1 1 120px;
-  max-width: 140px;
 }
 
 .icones-servicos img {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
 }
 
-/* --- CONTAINER E ROTAS --- */
 .container {
-  padding: 1rem 1.5rem;
+  padding: 18px;
   background-color: #fff7d4;
 }
 
 .rotas h2 {
   font-size: 1.5rem;
-  margin-bottom: 0.3rem;
 }
 
-.rotas p {
-  font-size: 1rem;
-}
-
-/* --- EXPERIÊNCIAS --- */
 .experiencias {
   margin-top: 2rem;
   text-align: center;
 }
 
+.experiencias img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
+
+/* ========================
+   SOBRE
+======================== */
+.sobre-page {
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: center;
+  background-color: #f3e5c1;
+}
+
+.sobre-card {
+  background-color: #fff7d4;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 700px;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  text-align: left;
+}
+
+.sobre-card h1 {
+  font-size: 2rem;
+  color: #2f5631;
+  margin-bottom: 0.5rem;
+}
+
+.sobre-card .subtitulo {
+  font-size: 1.1rem;
+  color: #3f7444;
+  margin-bottom: 1.5rem;
+}
+
+.sobre-card p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* ========================
+   CONTATO
+======================== */
+.contato-page {
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: center;
+  background-color: #f3e5c1;
+}
+
+.contato-card {
+  background-color: #fff7d4;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.contato-card h1 {
+  font-size: 2rem;
+  color: #2f5631;
+  margin-bottom: 1rem;
+}
+
+.contato-card p {
+  color: #444;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.info-contato {
+  margin: 1.5rem 0;
+  text-align: left;
+}
+
+.info-contato p {
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+  color: #2f5631;
+}
+
+.info-contato i {
+  margin-right: 8px;
+  color: #3f7444;
+}
+
+.info-contato a {
+  color: #2f5631;
+  text-decoration: none;
+}
+
+.info-contato a:hover {
+  text-decoration: underline;
+}
+
+.form-contato {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-contato input,
+.form-contato textarea {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: sans-serif;
+}
+
+.form-contato button {
+  background-color: #2f5631;
+  color: #fff;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.form-contato button:hover {
+  background-color: #3f7444;
+}
+
+/* ========================
+   AVALIAÇÕES
+======================== */
+.avaliacoes {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding: 0 1rem;
+}
+
+.avaliacao {
+  background-color: #fff8e5;
+  border-left: 4px solid #2f5631;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.avaliacao .comentario {
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.avaliacao .autor {
+  font-weight: bold;
+  color: #2f5631;
+}
+
+.avaliacao .estrelas {
+  color: #f1c40f;
+  font-size: 1.2rem;
+}
+
+/* ========================
+   CARROSSEL PEEK
+======================== */
 .carrossel-peek {
   max-width: 500px;
   margin: 0 auto 2rem;
@@ -163,7 +321,7 @@ header {
   object-fit: cover;
 }
 
-/* Bolinhas de navegação */
+/* Bolinhas */
 .carrossel-botoes {
   display: flex;
   justify-content: center;
@@ -198,7 +356,6 @@ header {
   transform: translateX(-243%);
 }
 
-/* Destaque central + fade lateral */
 .carrossel-itens .item {
   opacity: 0.5;
   transform: scale(0.9);
@@ -212,7 +369,6 @@ header {
   transform: scale(1);
 }
 
-/* Ativa bolinha */
 #peek1:checked ~ .carrossel-botoes label:nth-child(1),
 #peek2:checked ~ .carrossel-botoes label:nth-child(2),
 #peek3:checked ~ .carrossel-botoes label:nth-child(3),
@@ -220,124 +376,125 @@ header {
   background-color: #2f5631;
 }
 
-/* --- AVALIAÇÕES --- */
-.avaliacoes {
-  margin-top: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-  padding: 0 1rem;
+/* ========================
+   CHAT FLUTUANTE
+======================== */
+.chat-flutuante {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #2f5631;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 0.8rem 1rem;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+  z-index: 1000;
 }
 
-.avaliacao {
-  background-color: #fff8e5;
-  border-left: 4px solid #2f5631;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+.chat-flutuante:hover {
+  transform: scale(1.1);
+  background-color: #3f7444;
 }
 
-.avaliacao .comentario {
-  font-style: italic;
-  margin-bottom: 0.5rem;
-}
-
-.avaliacao .autor {
-  font-weight: bold;
-  color: #2f5631;
-}
-
-.avaliacao .estrelas {
-  color: #f1c40f;
-  font-size: 1.2rem;
-}
-
-/* --- RESPONSIVIDADE --- */
-@media (max-width: 600px) {
-  /* Navbar continua em linha */
+/* ========================
+   RESPONSIVIDADE
+======================== */
+@media (max-width: 768px) {
+  /* Navbar responsivo com logo em cima e menu em linha abaixo centralizados */
   .navbar {
-    padding: 0 0.5rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .menu {
+    flex-direction: row;
+    gap: 1.5rem;
   }
 
   .logo {
-    font-size: 1.1rem;
-  }
-
-  .logo img {
-    height: 38px;
-  }
-
-  .menu a {
-    font-size: 1.1rem;
-    padding: 0.6rem 1rem;
-  }
-
-  /* Boas-vindas */
-  .boas-vindas h1 {
-    font-size: 1.6rem;
-    margin-bottom: 0.75rem;
-  }
-
-  .boas-vindas p {
-    font-size: 1.1rem;
-  }
-
-  .botao-explorar {
-    font-size: 1.1rem;
-    padding: 1rem 1.5rem;
-    margin-top: 1.5rem;
-  }
-
-  /* Ícones serviços */
-  .icones-servicos {
-    justify-content: center;
-  }
-
-  .icones-servicos .icone {
-    flex: 1 1 40%;
-    max-width: 140px;
-  }
-
-  /* Container e rotas */
-  .container {
-    padding: 1rem;
-  }
-
-  .rotas h2 {
     font-size: 1.3rem;
   }
 
-  .rotas p {
-    font-size: 1rem;
+  .logo img {
+    height: 36px;
   }
 
-  /* Carrossel */
+  .icones-servicos {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .home {
+    padding: 1rem 0.5rem;
+  }
+
+  .boas-vindas h1 {
+    font-size: 1.4rem;
+  }
+
+  .botao-explorar {
+    padding: 0.6rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  .avaliacoes {
+    padding: 0;
+  }
+
+  .avaliacao {
+    font-size: 0.95rem;
+  }
+
   .carrossel-wrapper {
     padding: 0 5%;
   }
 
-  .carrossel-itens .item {
+  .item {
     flex: 0 0 85%;
   }
+}
 
-  /* Avaliações */
-  .avaliacoes {
-    padding: 0 0.5rem;
+@media (max-width: 600px) {
+  .sobre-card,
+  .contato-card {
+    padding: 1.5rem;
+    margin: 1rem;
   }
 
-  .avaliacao {
-    padding: 1.2rem;
+  .sobre-card h1,
+  .contato-card h1 {
+    font-size: 1.6rem;
   }
 
-  .avaliacao .comentario {
-    font-size: 1rem;
+  .sobre-card p,
+  .contato-card p {
+    font-size: 0.95rem;
   }
 
-  .avaliacao .autor {
-    font-size: 1rem;
+  .info-contato p {
+    font-size: 0.95rem;
   }
 
-  .avaliacao .estrelas {
-    font-size: 1.4rem;
+  .form-contato input,
+  .form-contato textarea,
+  .form-contato button {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+  }
+
+  .logo img {
+    height: 28px;
   }
 }

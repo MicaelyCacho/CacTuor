@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cactour - Início</title>
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
   <header>
@@ -14,7 +15,7 @@
         <span>CACTOUR</span>
       </div>
       <ul class="menu">
-        <li><a href="index.html">Início</a></li>
+        <li><a href="index.html" class="ativo">Início</a></li>
         <li><a href="sobre.html">Sobre</a></li>
         <li><a href="contato.html">Contato</a></li>
       </ul>
@@ -30,96 +31,94 @@
 
     <section class="icones-servicos">
       <div class="icone">
-        <img src="img/hospedagem.png" alt="Hospedagem" />
+        <img src="img/hospedagem.png" alt="Ícone de hospedagem" />
         <p>Hospedagem</p>
       </div>
       <div class="icone">
-        <img src="img/roteiros.png" alt="Roteiros" />
+        <img src="img/roteiros.png" alt="Ícone de roteiros" />
         <p>Roteiros</p>
       </div>
       <div class="icone">
-        <img src="img/gastronomia.png" alt="Gastronomia" />
+        <img src="img/gastronomia.png" alt="Ícone de gastronomia" />
         <p>Gastronomia</p>
       </div>
       <div class="icone">
-        <img src="img/cultura.png" alt="Cultura" />
+        <img src="img/cultura.png" alt="Ícone de cultura" />
         <p>Cultura</p>
       </div>
     </section>
-    </main>
-    <div class="container">
+  </main>
+
+  <div class="container">
     <section class="rotas">
       <h2>Rotas Personalizadas</h2>
       <p>Planeje sua viagem com sugestões sob medida para você</p>
     </section>
 
     <section class="experiencias">
-<div class="carrossel-peek">
-  <input type="radio" name="peek" id="peek1" checked>
-  <input type="radio" name="peek" id="peek2">
-  <input type="radio" name="peek" id="peek3">
-  <input type="radio" name="peek" id="peek4">
+      <div class="carrossel-peek">
+        <input type="radio" name="peek" id="peek1" checked>
+        <input type="radio" name="peek" id="peek2">
+        <input type="radio" name="peek" id="peek3">
+        <input type="radio" name="peek" id="peek4">
 
-  <div class="carrossel-wrapper">
-    <div class="carrossel-itens">
-      <div class="item" id="item1">
-        <img src="img/Caninde-de-Sao-Francisco-.webp" alt="Imagem 1" />
+        <div class="carrossel-wrapper">
+          <div class="carrossel-itens">
+            <div class="item" id="item1">
+              <img src="img/Caninde-de-Sao-Francisco-.webp" alt="Imagem 1" />
+            </div>
+            <div class="item" id="item2">
+              <img src="img/Piranhas.jpeg" alt="Imagem 2" />
+            </div>
+            <div class="item" id="item3">
+              <img src="img/Piranhas_2.webp" alt="Imagem 3" />
+            </div>
+            <div class="item" id="item4">
+              <img src="img/rio.jpeg" alt="Imagem 4" />
+            </div>
+          </div>
+        </div>
+
+        <div class="carrossel-botoes">
+          <label for="peek1"></label>
+          <label for="peek2"></label>
+          <label for="peek3"></label>
+          <label for="peek4"></label>
+        </div>
       </div>
-      <div class="item" id="item2">
-        <img src="img/Piranhas.jpeg" alt="Imagem 2" />
+
+      <h3>Experiências Compartilhadas</h3>
+
+      <div class="avaliacoes">
+        <div class="avaliacao">
+          <p class="comentario">“Fiquei encantada com a receptividade do povo e as paisagens maravilhosas do Cânion do Xingó. Uma viagem inesquecível!”</p>
+          <p class="autor">— Mariana Souza</p>
+          <p class="estrelas">⭐⭐⭐⭐⭐</p>
+        </div>
+
+        <div class="avaliacao">
+          <p class="comentario">“Os roteiros culturais me surpreenderam! Aprendi muito sobre o sertão sergipano. Voltarei com certeza.”</p>
+          <p class="autor">— Carlos Henrique</p>
+          <p class="estrelas">⭐⭐⭐⭐⭐</p>
+        </div>
+
+        <div class="avaliacao">
+          <p class="comentario">“Ótimas opções de gastronomia local. Me apaixonei pelo bode assado e pelo queijo coalho. Atendimento impecável.”</p>
+          <p class="autor">— Renata Lima</p>
+          <p class="estrelas">⭐⭐⭐⭐⭐</p>
+        </div>
+
+        <div class="avaliacao">
+          <p class="comentario">“Gostei muito dos passeios, mas achei que faltaram mais placas informativas nos pontos turísticos.”</p>
+          <p class="autor">— João Pedro</p>
+          <p class="estrelas">⭐⭐⭐⭐</p>
+        </div>
       </div>
-      <div class="item" id="item3">
-        <img src="img/Piranhas_2.webp" alt="Imagem 3" />
-      </div>
-      <div class="item" id="item4">
-        <img src="img/rio.jpeg" alt="Imagem 4" />
-      </div>
-    </div>
-  </div>
-
-  <div class="carrossel-botoes">
-    <label for="peek1"></label>
-    <label for="peek2"></label>
-    <label for="peek3"></label>
-    <label for="peek4"></label>
-  </div>
-</div>
-
-
-  <h3>Experiências Compartilhadas</h3>
-
-  <div class="avaliacoes">
-    <div class="avaliacao">
-      <p class="comentario">“Fiquei encantada com a receptividade do povo e as paisagens maravilhosas do Cânion do Xingó. Uma viagem inesquecível!”</p>
-      <p class="autor">— Mariana Souza</p>
-      <p class="estrelas">⭐⭐⭐⭐⭐</p>
-    </div>
-
-    <div class="avaliacao">
-      <p class="comentario">“Os roteiros culturais me surpreenderam! Aprendi muito sobre o sertão sergipano. Voltarei com certeza.”</p>
-      <p class="autor">— Carlos Henrique</p>
-      <p class="estrelas">⭐⭐⭐⭐⭐</p>
-    </div>
-
-    <div class="avaliacao">
-      <p class="comentario">“Ótimas opções de gastronomia local. Me apaixonei pelo bode assado e pelo queijo coalho. Atendimento impecável.”</p>
-      <p class="autor">— Renata Lima</p>
-      <p class="estrelas">⭐⭐⭐⭐⭐</p>
-    </div>
-
-    <div class="avaliacao">
-      <p class="comentario">“Gostei muito dos passeios, mas achei que faltaram mais placas informativas nos pontos turísticos.”</p>
-      <p class="autor">— João Pedro</p>
-      <p class="estrelas">⭐⭐⭐⭐</p>
-    </div>
-  </div>
-</section>
-
     </section>
   </div>
-  <a href="#" class="chat-flutuante" title="Fale com nossa IA">
-  💬
-</a>
 
+  <a href="#" class="chat-flutuante" title="Fale com nossa IA">
+    💬
+  </a>
 </body>
 </html>

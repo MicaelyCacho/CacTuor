@@ -1,4 +1,6 @@
-/* GERAL */
+/* ========================
+   GERAL
+======================== */
 body {
   margin: 0;
   font-family: sans-serif;
@@ -6,6 +8,9 @@ body {
   color: #2f5631;
 }
 
+/* ========================
+   NAVEGAÇÃO
+======================== */
 header {
   background-color: #fff7d4;
   padding: 1rem;
@@ -42,7 +47,9 @@ header {
   font-weight: 500;
 }
 
-/* INÍCIO */
+/* ========================
+   HOME
+======================== */
 .home {
   padding: 1rem;
 }
@@ -74,11 +81,10 @@ header {
   height: 40px;
 }
 
-.container{
-    padding: 18px;
-    background-color: #fff7d4;
+.container {
+  padding: 18px;
+  background-color: #fff7d4;
 }
-
 
 .rotas h2 {
   font-size: 1.5rem;
@@ -96,7 +102,9 @@ header {
   margin-bottom: 0.5rem;
 }
 
-/* SOBRE */
+/* ========================
+   SOBRE
+======================== */
 .sobre-page {
   padding: 2rem 1rem;
   display: flex;
@@ -133,23 +141,9 @@ header {
   margin-bottom: 1rem;
 }
 
-@media (max-width: 600px) {
-  .sobre-card {
-    padding: 1.5rem;
-    margin: 1rem;
-  }
-
-  .sobre-card h1 {
-    font-size: 1.6rem;
-  }
-
-  .sobre-card p {
-    font-size: 0.95rem;
-  }
-}
-
-
-/* CONTATO */
+/* ========================
+   CONTATO
+======================== */
 .contato-page {
   padding: 2rem 1rem;
   display: flex;
@@ -234,36 +228,9 @@ header {
   background-color: #3f7444;
 }
 
-/* Responsivo */
-@media (max-width: 500px) {
-  .contato-card {
-    padding: 1.2rem;
-  }
-}
-
-
-/* CHAT FLUTUANTE */
-.chat-flutuante {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #2f5631;
-  color: #fff;
-  font-size: 1.5rem;
-  padding: 0.8rem 1rem;
-  border-radius: 50%;
-  text-decoration: none;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease;
-  z-index: 1000;
-}
-
-.chat-flutuante:hover {
-  transform: scale(1.1);
-  background-color: #3f7444;
-}
-
-/* AVALIAÇÕES */
+/* ========================
+   AVALIAÇÕES
+======================== */
 .avaliacoes {
   margin-top: 1.5rem;
   display: flex;
@@ -295,6 +262,9 @@ header {
   font-size: 1.2rem;
 }
 
+/* ========================
+   CARROSSEL PEEK
+======================== */
 .carrossel-peek {
   max-width: 500px;
   margin: 0 auto 2rem;
@@ -331,7 +301,7 @@ header {
   object-fit: cover;
 }
 
-/* Bolinhas de navegação */
+/* Bolinhas */
 .carrossel-botoes {
   display: flex;
   justify-content: center;
@@ -366,7 +336,6 @@ header {
   transform: translateX(-243%);
 }
 
-/* Destaque central + fade lateral */
 .carrossel-itens .item {
   opacity: 0.5;
   transform: scale(0.9);
@@ -380,7 +349,6 @@ header {
   transform: scale(1);
 }
 
-/* Ativa bolinha */
 #peek1:checked ~ .carrossel-botoes label:nth-child(1),
 #peek2:checked ~ .carrossel-botoes label:nth-child(2),
 #peek3:checked ~ .carrossel-botoes label:nth-child(3),
@@ -388,12 +356,125 @@ header {
   background-color: #2f5631;
 }
 
-/* Responsividade */
-@media (max-width: 600px) {
+/* ========================
+   CHAT FLUTUANTE
+======================== */
+.chat-flutuante {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #2f5631;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 0.8rem 1rem;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+.chat-flutuante:hover {
+  transform: scale(1.1);
+  background-color: #3f7444;
+}
+
+/* ========================
+   RESPONSIVIDADE
+======================== */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-left: 0;
+  }
+
+  .logo {
+    font-size: 1rem;
+  }
+
+  .logo img {
+    height: 32px;
+  }
+
+  .icones-servicos {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .home {
+    padding: 1rem 0.5rem;
+  }
+
+  .boas-vindas h1 {
+    font-size: 1.4rem;
+  }
+
+  .botao-explorar {
+    padding: 0.6rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  .avaliacoes {
+    padding: 0;
+  }
+
+  .avaliacao {
+    font-size: 0.95rem;
+  }
+
   .carrossel-wrapper {
     padding: 0 5%;
   }
+
   .item {
     flex: 0 0 85%;
+  }
+}
+
+@media (max-width: 600px) {
+  .sobre-card,
+  .contato-card {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+
+  .sobre-card h1,
+  .contato-card h1 {
+    font-size: 1.6rem;
+  }
+
+  .sobre-card p,
+  .contato-card p {
+    font-size: 0.95rem;
+  }
+
+  .info-contato p {
+    font-size: 0.95rem;
+  }
+
+  .form-contato input,
+  .form-contato textarea,
+  .form-contato button {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+  }
+
+  .logo img {
+    height: 28px;
   }
 }

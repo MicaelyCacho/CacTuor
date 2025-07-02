@@ -12,10 +12,15 @@ header {
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+/* Navbar - sempre em linha com scroll horizontal se necessário */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 1rem;
+  flex-wrap: nowrap; /* não quebra linha */
+  overflow-x: auto; /* scroll horizontal se necessário */
+  -webkit-overflow-scrolling: touch; /* suaviza scroll no iOS */
 }
 
 .logo {
@@ -24,6 +29,7 @@ header {
   gap: 0.5rem;
   font-weight: bold;
   font-size: 1.2rem;
+  flex-shrink: 0; /* não encolhe */
 }
 
 .logo img {
@@ -34,12 +40,31 @@ header {
   list-style: none;
   display: flex;
   gap: 1rem;
+  margin: 0;
+  padding: 0;
+  flex-wrap: nowrap;
+  overflow-x: auto; /* scroll horizontal se necessário */
+  -webkit-overflow-scrolling: touch;
+}
+
+.menu li {
+  flex-shrink: 0; /* não encolhe */
 }
 
 .menu a {
   text-decoration: none;
   color: #2f5631;
   font-weight: 500;
+  padding: 0.5rem 0.8rem;
+  white-space: nowrap; /* sem quebra de texto */
+  display: block;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.menu a:hover {
+  background-color: #e1dcb2;
+  border-radius: 5px;
 }
 
 /* --- INÍCIO --- */
@@ -229,36 +254,22 @@ header {
 
 /* --- RESPONSIVIDADE --- */
 @media (max-width: 600px) {
-  /* Navbar empilhada */
+  /* Navbar continua em linha */
   .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 0.5rem 1rem;
+    padding: 0 0.5rem;
   }
 
   .logo {
-    font-size: 1.4rem;
+    font-size: 1.1rem;
   }
 
   .logo img {
-    height: 45px;
-  }
-
-  .menu {
-    flex-direction: column;
-    width: 100%;
-    gap: 0.5rem;
-  }
-
-  .menu li {
-    width: 100%;
+    height: 38px;
   }
 
   .menu a {
-    display: block;
-    padding: 0.5rem 0;
     font-size: 1.1rem;
+    padding: 0.6rem 1rem;
   }
 
   /* Boas-vindas */
